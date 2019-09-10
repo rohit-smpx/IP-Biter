@@ -115,6 +115,9 @@ $darkTheme = true;
 $debugMode = false;
 /*END CONFIGURATION SECTION*/
 
+if(file_exists('private.php'))
+    include 'private.php';
+
 error_reporting($debugMode?-1:0);
 if(function_exists('ini_set'))
     ini_set("display_errors", $debugMode?1:0);
