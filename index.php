@@ -1319,6 +1319,9 @@ if(isset($_GET['op']) && $_GET['op'] == 'i'){
         http_response_code($config->trackingImageStatusCode);
         if(isset($config->trackingImage) && $config->trackingImage!='')
             echo file_get_contents($config->trackingImage);
+        else
+            // Empty 1x1.gif
+            echo file_get_contents("data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==");
     }catch(Exception $ex){
         $logError($ex->getMessage());
         http_response_code(400);
