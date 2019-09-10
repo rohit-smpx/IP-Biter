@@ -106,7 +106,7 @@ Try to hack it as a challange and report me your success; you will be rewarded w
 */
 
 /*START CONFIGURATION SECTION*/
-$dashboardPage = 'dashboard';
+$dashboardPage = '';
 $dashboardPageSecret = '';
 $configFolder = 'configs';
 $reportFolder = 'reports';
