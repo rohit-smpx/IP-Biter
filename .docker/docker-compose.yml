@@ -8,6 +8,9 @@ services:
             - "8020:80"
         volumes:
             - ../:/code
+            # This overrides the dir with empty temp volumes
+            - /code/configs
+            - /code/reports
             - ./site.conf:/etc/nginx/conf.d/default.conf
     php:
         image: php:fpm-alpine
